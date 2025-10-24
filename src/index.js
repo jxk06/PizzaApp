@@ -1,17 +1,60 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+function App() {
+    return (
+        <div>
+            <Header />
+            <Pizza />
+            <Pizza2 />
+        </div>
+    )
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function Header() {
+    return (
+        <h1>Jing Xi's Pizza Co.</h1>
+
+    )
+}
+
+function Pizza() {
+    return (
+        <div>
+            <img src="/pizzas/focaccia.jpg" alt="focaccia" />
+             <h2> Focaccia</h2>
+            <div>
+                <p>Olive oil</p>
+                <p>5</p>
+            </div>
+            
+
+
+        </div>
+        
+    )
+}
+
+function Pizza2() {
+    return (
+        <div>
+            <img src="/pizzas/funghi.jpg" alt="funghi" />
+            <h2> Funghi Pizza</h2>
+            <div>
+                <p>Tomato, Onion, Cheese</p>
+                <p>10</p>
+            </div>
+
+
+        </div>
+        
+    )
+}
+
+
+
+
+
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />)
